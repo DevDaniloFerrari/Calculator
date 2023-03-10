@@ -35,7 +35,20 @@ void Division(){
 
     Console.WriteLine("");
 
-    Console.WriteLine("The result of subtraction is: " + (firstValue / secondValue));
+    Console.WriteLine("The result of division is: " + (firstValue / secondValue));
 }
 
-Division();
+void Multiplication(){
+    Console.Clear();
+    Console.WriteLine("First value: ");
+    float firstValue = float.Parse(Console.ReadLine());
+
+    Console.WriteLine("Second value: ");
+    float secondValue = float.Parse(Console.ReadLine());
+
+    Console.WriteLine("");
+
+    Console.WriteLine("The result of multiplication is: " + (firstValue * secondValue));
+}
+
+Multiplication();
