@@ -10,6 +10,8 @@
     Console.WriteLine("");
 
     Console.WriteLine("The result of sum is: " + (firstValue + secondValue));
+    Console.ReadKey();
+    Menu();
 }
 
 void Subtraction(){
@@ -23,6 +25,8 @@ void Subtraction(){
     Console.WriteLine("");
 
     Console.WriteLine("The result of subtraction is: " + (firstValue - secondValue));
+    Console.ReadKey();
+    Menu();
 }
 
 void Division(){
@@ -36,6 +40,8 @@ void Division(){
     Console.WriteLine("");
 
     Console.WriteLine("The result of division is: " + (firstValue / secondValue));
+    Console.ReadKey();
+    Menu();
 }
 
 void Multiplication(){
@@ -49,6 +55,30 @@ void Multiplication(){
     Console.WriteLine("");
 
     Console.WriteLine("The result of multiplication is: " + (firstValue * secondValue));
+    Console.ReadKey();
+    Menu();
 }
 
-Multiplication();
+void Menu(){
+    Console.Clear();
+    Console.WriteLine("Hello, what do you want to calculate?");
+    Console.WriteLine("1 - Sum");
+    Console.WriteLine("2 - Subtraction");
+    Console.WriteLine("3 - Division");
+    Console.WriteLine("4 - Multiplication");
+
+    Console.WriteLine("--------------");
+    Console.WriteLine("Select one option: ");
+    short response = short.Parse(Console.ReadLine());
+
+    switch (response)
+    {
+        case 1: Sum(); break;
+        case 2: Subtraction(); break;
+        case 3: Division(); break;
+        case 4: Multiplication(); break;
+        default: Console.WriteLine("Invalid Option"); break;
+    }
+}
+
+Menu();
